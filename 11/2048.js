@@ -143,12 +143,14 @@ window.onkeydown=e=>{
     var startx,starty,endx,endy;
     //为window添加滑动开始事件，记录鼠标开始的坐标
     window.addEventListener('touchstart',function(e){
+        e.preventDefault();
         var touch=e.changedTouches;
         startx=touch[0].clientX;
         starty=touch[0].clientY;
     });
     //为window添加滑动结束事件，获得鼠标结束位置
     window.addEventListener('touchend',function(e){
+        e.preventDefault();
         var touch=e.changedTouches;
         endx=touch[0].clientX;
         endy=touch[0].clientY;
